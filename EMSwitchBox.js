@@ -1,4 +1,4 @@
-/*CHSwitchBox.js
+/*EMSwitchBox.js
 Description: An extremely simple but attractive toggle switch you can use in place of a standard input checkbox.
 Author: Collin Henderson
 Website: http://syropia.net
@@ -11,7 +11,7 @@ Version: 1.3
     $.fn.extend({
 
 
-        CHSwitchBox: function(options) {
+        EMSwitchBox: function(options) {
 	
 			//Set up defaults
 			var defaults = { 
