@@ -21,7 +21,7 @@ Version: 1.3
 			var options = $.extend({}, defaults, options)
             //Iterate over the current set of matched elements
             return this.each(function() {
-                var $markup = $('<div class="switch"><span class="green">'+options.onLabel+'</span><span class="red">'+options.offLabel+'</span><div class="thumb"></div></div>');
+                var $markup = $('<div class="switch" for="' + $(this).attr('id') + '"><span class="green">'+options.onLabel+'</span><span class="red">'+options.offLabel+'</span><div class="thumb"></div></div>');
                 $markup.insertAfter($(this));
                 $(this).hide();
 
@@ -62,6 +62,11 @@ Version: 1.3
                     }
                     $(this).prev('input').attr('checked', false);
                 });
+                
+                //toggle switch on if checkbox was checked
+                if ($(this).is(':checked')) {
+                  $('div.switch[for="' + $(this).attr('id') + '"]').children('div.thumb').css('left', '26px');
+                }
 
             });
 
